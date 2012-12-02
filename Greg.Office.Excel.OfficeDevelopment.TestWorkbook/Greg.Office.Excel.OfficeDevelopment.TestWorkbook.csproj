@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RootNamespace>Greg.Office.Excel.OfficeDevelopment.TestWorkbook</RootNamespace>
+    <AssemblyName>Greg.Office.Excel.OfficeDevelopment.TestWorkbook</AssemblyName>
+    <VSTO_HostDocumentName>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</VSTO_HostDocumentName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <DefineConstants>VSTO40</DefineConstants>
+    <OfficeApplication>Excel</OfficeApplication>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <ProjectGuid>{D2AEAF05-BD37-441E-BBF8-D8A94C37DB87}</ProjectGuid>
+    <SolutionID>4f18e176-833c-47d1-b1c2-4d13ca3129e2</SolutionID>
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VSTO_EmbedTypeLibraryInAssembly>false</VSTO_EmbedTypeLibraryInAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionsPaneControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActionsPaneControl1.Designer.cs">
+      <DependentUpon>ActionsPaneControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz1.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz1.Designer.cs">
+      <DependentUpon>Arkusz1.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz10.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz10.Designer.cs">
+      <DependentUpon>Arkusz10.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz11.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz11.Designer.cs">
+      <DependentUpon>Arkusz11.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz12.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz12.Designer.cs">
+      <DependentUpon>Arkusz12.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz13.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz13.Designer.cs">
+      <DependentUpon>Arkusz13.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz14.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz14.Designer.cs">
+      <DependentUpon>Arkusz14.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz2.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz2.Designer.cs">
+      <DependentUpon>Arkusz2.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz3.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz3.Designer.cs">
+      <DependentUpon>Arkusz3.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz4.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz4.Designer.cs">
+      <DependentUpon>Arkusz4.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz5.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz5.Designer.cs">
+      <DependentUpon>Arkusz5.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz6.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz6.Designer.cs">
+      <DependentUpon>Arkusz6.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz7.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz7.Designer.cs">
+      <DependentUpon>Arkusz7.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz8.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz8.Designer.cs">
+      <DependentUpon>Arkusz8.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz9.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="Arkusz9.Designer.cs">
+      <DependentUpon>Arkusz9.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThisWorkbook.cs">
+      <DependentUpon>Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx</DependentUpon>
+    </Compile>
+    <Compile Include="ThisWorkbook.Designer.cs">
+      <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActionsPaneControl1.resx">
+      <DependentUpon>ActionsPaneControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Arkusz1.resx">
+      <DependentUpon>Arkusz1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx" />
+    <None Include="Greg.Office.Excel.OfficeDevelopment.TestWorkbook_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ThisWorkbook.Designer.xml">
+      <DependentUpon>ThisWorkbook.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz1.Designer.xml">
+      <DependentUpon>Arkusz1.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz2.Designer.xml">
+      <DependentUpon>Arkusz2.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz3.Designer.xml">
+      <DependentUpon>Arkusz3.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz4.Designer.xml">
+      <DependentUpon>Arkusz4.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz5.Designer.xml">
+      <DependentUpon>Arkusz5.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz6.Designer.xml">
+      <DependentUpon>Arkusz6.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz7.Designer.xml">
+      <DependentUpon>Arkusz7.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz8.Designer.xml">
+      <DependentUpon>Arkusz8.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz9.Designer.xml">
+      <DependentUpon>Arkusz9.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz10.Designer.xml">
+      <DependentUpon>Arkusz10.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz11.Designer.xml">
+      <DependentUpon>Arkusz11.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz12.Designer.xml">
+      <DependentUpon>Arkusz12.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz13.Designer.xml">
+      <DependentUpon>Arkusz13.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Arkusz14.Designer.xml">
+      <DependentUpon>Arkusz14.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Greg.Office.Excel.OfficeDevelopment.TestWorkbook_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F90A8025F5D7A646C787E045C7FB1C9E7D4F585C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx" HostPackage="{825100CF-0BA7-47EA-A084-DCF3308DAF74}" OfficeVersion="14.0" VstxVersion="4.0" ApplicationType="XLS" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files\Microsoft Office\Office14\Excel.exe" DebugInfoCommandLine="&quot;[$OUTPUT]Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx&quot;" />
+        <Host Name="Excel Document" Path=".\Greg.Office.Excel.OfficeDevelopment.TestWorkbook.xlsx" GeneratedCodeNamespace="Greg.Office.Excel.OfficeDevelopment.TestWorkbook">
+          <HostItem Name="Arkusz1" Code="Arkusz1.cs" CanonicalName="Arkusz1" DisplayName="Arkusz1" Blueprint="Arkusz1.Designer.xml" GeneratedCode="Arkusz1.Designer.cs" />
+          <HostItem Name="Arkusz10" Code="Arkusz10.cs" CanonicalName="Arkusz10" DisplayName="Arkusz10" Blueprint="Arkusz10.Designer.xml" GeneratedCode="Arkusz10.Designer.cs" />
+          <HostItem Name="Arkusz11" Code="Arkusz11.cs" CanonicalName="Arkusz11" DisplayName="Arkusz11" Blueprint="Arkusz11.Designer.xml" GeneratedCode="Arkusz11.Designer.cs" />
+          <HostItem Name="Arkusz12" Code="Arkusz12.cs" CanonicalName="Arkusz12" DisplayName="Arkusz12" Blueprint="Arkusz12.Designer.xml" GeneratedCode="Arkusz12.Designer.cs" />
+          <HostItem Name="Arkusz13" Code="Arkusz13.cs" CanonicalName="Arkusz13" DisplayName="Arkusz13" Blueprint="Arkusz13.Designer.xml" GeneratedCode="Arkusz13.Designer.cs" />
+          <HostItem Name="Arkusz14" Code="Arkusz14.cs" CanonicalName="Arkusz14" DisplayName="Arkusz14" Blueprint="Arkusz14.Designer.xml" GeneratedCode="Arkusz14.Designer.cs" />
+          <HostItem Name="Arkusz2" Code="Arkusz2.cs" CanonicalName="Arkusz2" DisplayName="Arkusz2" Blueprint="Arkusz2.Designer.xml" GeneratedCode="Arkusz2.Designer.cs" />
+          <HostItem Name="Arkusz3" Code="Arkusz3.cs" CanonicalName="Arkusz3" DisplayName="Arkusz3" Blueprint="Arkusz3.Designer.xml" GeneratedCode="Arkusz3.Designer.cs" />
+          <HostItem Name="Arkusz4" Code="Arkusz4.cs" CanonicalName="Arkusz4" DisplayName="Arkusz4" Blueprint="Arkusz4.Designer.xml" GeneratedCode="Arkusz4.Designer.cs" />
+          <HostItem Name="Arkusz5" Code="Arkusz5.cs" CanonicalName="Arkusz5" DisplayName="Arkusz5" Blueprint="Arkusz5.Designer.xml" GeneratedCode="Arkusz5.Designer.cs" />
+          <HostItem Name="Arkusz6" Code="Arkusz6.cs" CanonicalName="Arkusz6" DisplayName="Arkusz6" Blueprint="Arkusz6.Designer.xml" GeneratedCode="Arkusz6.Designer.cs" />
+          <HostItem Name="Arkusz7" Code="Arkusz7.cs" CanonicalName="Arkusz7" DisplayName="Arkusz7" Blueprint="Arkusz7.Designer.xml" GeneratedCode="Arkusz7.Designer.cs" />
+          <HostItem Name="Arkusz8" Code="Arkusz8.cs" CanonicalName="Arkusz8" DisplayName="Arkusz8" Blueprint="Arkusz8.Designer.xml" GeneratedCode="Arkusz8.Designer.cs" />
+          <HostItem Name="Arkusz9" Code="Arkusz9.cs" CanonicalName="Arkusz9" DisplayName="Arkusz9" Blueprint="Arkusz9.Designer.xml" GeneratedCode="Arkusz9.Designer.cs" />
+          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.cs" CanonicalName="ThisWorkbook" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.cs" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+    To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
